@@ -3,6 +3,7 @@
 ## Introduction: 
 
 KPM is a project that makes a playlist for you to discover new songs based on your interests.
+
 For that it uses the Spotify API along with Python to get good recomendations so you can enjoy good music after your own tastes.
 
 ## Connecting To Spotify:
@@ -22,9 +23,13 @@ For that it uses the Spotify API along with Python to get good recomendations so
 ## Running The Aplication:
 
 Now that all the set up is done you can run the app with python:
+
 >`python spt.py`
 
 After that you will be prompted with the different parameters that you can change.
+
 When those are all filled, the program will ask you for a _Spotify Song Url_. This is used as a sample for the playlist.
+
 The ptogram will then present you with all the recomendations.
+
 Give the playlist a name and you're ready to go, everything is saved to a new playlist on your Spotify Library.
