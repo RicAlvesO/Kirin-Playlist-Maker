@@ -1,4 +1,3 @@
-from logging import PlaceHolder, log
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
@@ -35,8 +34,13 @@ ls=[s_seed]
 rec = sp.recommendations(seed_artists=la, seed_genres=lg,seed_tracks=ls, limit=50, country=None,
                          target_acousticness=arco, target_danceability=danc, target_energy=ener, target_instrumentalness=inst, target_popularity=popu)
 
-pl_name = input("\nTo finish the process give the playlist a name: ")
+i=1
+print("\n\nSong List:")
+for idx, item in enumerate(rec['tracks']):
+    print(i,") ",item["name"])
+    i+=1
 
+pl_name = input("\nTo finish the process give the playlist a name: ")
 sp.user_playlist_create(user["id"], pl_name, public=False, collaborative=False, description='')
 results= sp.current_user_playlists(limit=1, offset=0)
 for idx, item in enumerate(results['items']):
